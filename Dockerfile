@@ -16,10 +16,10 @@ RUN wget -q https://github.com/jgm/pandoc/releases/download/2.2.2.1/pandoc-2.2.2
  && rm -f pandoc-2.2.2.1-1-amd64.deb
 
 ## Install pandoc-crossref
-RUN wget -q https://github.com/lierdakil/pandoc-crossref/releases/download/v0.3.0.0-beta3/linux-ghc8-pandoc-2-0.tar.gz \
- && tar -xvf linux-ghc8-pandoc-2-0.tar.gz \
+RUN wget -q https://github.com/lierdakil/pandoc-crossref/releases/download/v0.3.2.1/linux-ghc84-pandoc22.tar.gz \
+ && tar -xvf linux-ghc84-pandoc22.tar.gz \
  && mv pandoc-crossref /usr/local/bin/ \
- && rm -f linux-ghc8-pandoc-2-0.tar.gz
+ && rm -f linux-ghc84-pandoc22.tar.gz
 
 # Install ghr for uploading results to github
 RUN wget -q https://github.com/tcnksm/ghr/releases/download/v0.5.4/ghr_v0.5.4_linux_amd64.zip \
