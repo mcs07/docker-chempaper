@@ -22,10 +22,11 @@ RUN wget -q https://github.com/lierdakil/pandoc-crossref/releases/download/v0.3.
  && rm -f linux-ghc84-pandoc22.tar.gz
 
 # Install ghr for uploading results to github
-RUN wget -q https://github.com/tcnksm/ghr/releases/download/v0.5.4/ghr_v0.5.4_linux_amd64.zip \
- && unzip -e ghr_v0.5.4_linux_amd64.zip \
- && mv ghr /usr/local/bin/ \
- && rm ghr_v0.5.4_linux_amd64.zip
+RUN wget -q https://github.com/tcnksm/ghr/releases/download/v0.10.2/ghr_v0.10.2_linux_amd64.tar.gz \
+ && tar -xvf ghr_v0.10.2_linux_amd64.tar.gz \
+ && mv ghr_v0.10.2_linux_amd64/ghr /usr/local/bin/ \
+ && rm -f ghr_v0.10.2_linux_amd64.tar.gz \
+ && rm -rf ghr_v0.10.2_linux_amd64
 
 # Install minimal texlive
 COPY texlive.profile .
