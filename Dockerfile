@@ -41,7 +41,7 @@ ENV PATH="/usr/local/texlive/2017/bin/x86_64-linux:${PATH}"
 
 # Install latex packages
 RUN tlmgr install \
-    achemso amsmath caption collection-fontsrecommended float geometry graphics hyperref l3kernel l3packages \
+    achemso amsmath booktabs caption collection-fontsrecommended float geometry graphics hyperref l3kernel l3packages \
     latex-bin latexmk mhchem natbib oberdiek setspace subfig tools url xkeyval
 
 VOLUME ["/paper"]
