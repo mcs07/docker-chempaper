@@ -44,8 +44,8 @@ ENV PATH="/usr/local/texlive/bin/x86_64-linux:${PATH}"
 
 # Install latex packages
 RUN tlmgr install \
-    achemso amsmath booktabs caption collection-fontsrecommended float geometry \ 
-    graphics hyperref l3kernel l3packages latex-bin latexmk mhchem natbib oberdiek \ 
-    setspace subfig tools url xcolor xkeyval
+    achemso amsmath booktabs caption collection-fontsrecommended epstopdf-pkg float \
+    geometry graphics hyperref l3kernel l3packages latex-bin latexmk mhchem natbib \
+    oberdiek setspace subfig tools url xcolor xkeyval
 
 VOLUME ["/paper"]
